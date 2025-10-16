@@ -1,0 +1,82 @@
+/* 🔹 Sección general: ocupa todo el ancho */
+.f1-section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🔹 Imagen de fondo: se ajusta a todo el ancho del viewport */
+.f1-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+}
+
+/* 🔹 Imagen adaptada */
+.f1-banner img {
+  width: 100%;
+  height: 250px; /* ajustá la altura para mostrar solo la franja deseada */
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* 🔹 Tarjeta roja superpuesta */
+.f1-card {
+  position: absolute;
+  top: 20px;
+  right: 5%;
+  width: 260px;
+  background-color: #d00000;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  
+}
+
+.f1-card h2 {
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.f1-card p {
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.f1-card button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.f1-card button:hover {
+  background-color: #e0e0e0;
+}
+
+
+
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .section-f1 {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .f1-card {
+    position: static;
+    width: 90%;
+    margin-top: -40px;
+  }
+}
+
+

@@ -1,0 +1,184 @@
+/* Estilos generales */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar base */
+    nav {
+      background-color: #c00; /* Rojo tipo F1 */
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: opacity 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #7C0406;
+    }
+
+    /* Botón hamburguesa */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: white;
+    }
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 350px; /* ajustá según tu diseño */
+  overflow: hidden; /* oculta el exceso al recortar */
+}
+
+/* Imagen sin deformarse, recortando el exceso */
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* mantiene proporción y recorta lo que sobra */
+  object-position: center; /* centra la parte visible */
+}
+
+/* Texto encima del banner */
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.5); /* fondo semitransparente como en tu render */
+  padding: 15px 25px;
+  border-radius: 6px;
+}
+
+.banner-text h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.banner-text p {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+
+.carousel {
+  background-color: #bc080815; /* color rosado claro */
+  padding: 30px 0;
+}
+
+.logo-carrusel {
+  width: 120px;              /* Ancho fijo */
+  height: 120px;             /* Alto fijo */
+  object-fit: contain;       /* Mantiene proporción sin recortar */
+  border-radius: 50%;        /* Forma circular */
+  background-color: white;   /* Fondo blanco */
+  padding: 15px;             /* Espacio interior */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;   /* Centra horizontalmente la imagen dentro del círculo */
+  align-items: center;       /* Centra verticalmente */
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 220px;
+}
+
+
+.carousel-row {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  gap: 180px; /* Espacio entre imágenes */
+  height: 200px; /* Ajustá la altura del carrusel si querés */
+}
+
+.footer {
+  background-color: #c00; /* Rojo */
+  height: 120px; /* Ajustá la altura según necesites */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 60px; /* Espaciado entre los enlaces */
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+    /* Versión móvil */
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #c00;
+        text-align: center;
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+      .carousel-item .d-flex {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+      .logo-carrusel {
+        width: 100px;
+        height: 100px;
+    }
+    }
