@@ -1,85 +1,9 @@
-.banner {
-  position: relative;
-  width: 100%;
-  height: 350px; /* ajustá según tu diseño */
-  overflow: hidden; /* oculta el exceso al recortar */
-}
-
-/* Imagen sin deformarse, recortando el exceso */
-.banner-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* mantiene proporción y recorta lo que sobra */
-  object-position: center; /* centra la parte visible */
-}
-
-/* Texto encima del banner */
-.banner-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  background: rgba(0, 0, 0, 0.5); /* fondo semitransparente como en tu render */
-  padding: 15px 25px;
-  border-radius: 6px;
-}
-
-.banner-text h2 {
-  margin: 0;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.banner-text p {
-  margin-top: 5px;
-  font-size: 14px;
-}
-
-
-.carousel {
-  background-color: #bc080815; /* color rosado claro */
-  padding: 30px 0;
-}
-
-.logo-carrusel {
-  width: 120px;              /* Ancho fijo */
-  height: 120px;             /* Alto fijo */
-  object-fit: contain;       /* Mantiene proporción sin recortar */
-  border-radius: 50%;        /* Forma circular */
-  background-color: white;   /* Fondo blanco */
-  padding: 15px;             /* Espacio interior */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center;   /* Centra horizontalmente la imagen dentro del círculo */
-  align-items: center;       /* Centra verticalmente */
-}
-
-.carousel-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 220px;
-}
-
-
-.carousel-row {
-  display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  gap: 180px; /* Espacio entre imágenes */
-  height: 200px; /* Ajustá la altura del carrusel si querés */
-}
-
-/* 🔹 Sección general: ocupa todo el ancho */
 .f1-section {
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-/* 🔹 Imagen de fondo: se ajusta a todo el ancho del viewport */
 .f1-banner {
   position: relative;
   width: 100%;
@@ -87,16 +11,14 @@
 
 }
 
-/* 🔹 Imagen adaptada */
 .f1-banner img {
   width: 100%;
-  height: 250px; /* ajustá la altura para mostrar solo la franja deseada */
+  height: 250px; 
   object-fit: cover;
   object-position: center;
   display: block;
 }
 
-/* 🔹 Tarjeta roja superpuesta */
 .f1-card {
   position: absolute;
   top: 20px;
@@ -139,7 +61,7 @@
 
 
 
-/* 📱 Responsive */
+/* Responsive */
 @media (max-width: 768px) {
   .section-f1 {
     flex-direction: column;
@@ -158,15 +80,4 @@
 
 
 
-/* Responsivo (en pantallas chicas, solo 2 logos por fila) */
-@media (max-width: 768px) {
-  .carousel-item .d-flex {
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  .logo-carrusel {
-    width: 100px;
-    height: 100px;
-  }
-}
 
