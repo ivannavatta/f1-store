@@ -8,7 +8,9 @@ body {
     font-family: Arial, sans-serif;
 }
 
-nav {
+
+
+.navbar {
     background-color: #c00; 
     color: white;
     display: flex;
@@ -17,10 +19,10 @@ nav {
     position: relative;
 }
 
-.logo {
+.navbar .logo {
     font-weight: bold;
     font-size: 18px;
-    flex: 0 0 auto
+    padding-left: 20px;
 }
 
 .nav-links {
@@ -37,6 +39,11 @@ nav {
     text-decoration: none;
     font-weight: bold;
     transition: opacity 0.3s;
+}
+
+.nav-links  a.active {
+    font-weight: bold;
+    color: #7C0406;
 }
 
 .nav-links a:hover {

@@ -7,7 +7,6 @@
 .f1-banner {
   position: relative;
   width: 100%;
-  overflow: hidden;
 
 }
 
@@ -21,7 +20,7 @@
 
 .f1-card {
   position: absolute;
-  top: 20px;
+  top: -40px;
   right: 5%;
   width: 260px;
   background-color: #d00000;
@@ -29,6 +28,7 @@
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 2;
   
 }
 
@@ -38,9 +38,27 @@
   font-weight: bold;
 }
 
-.f1-card p {
-  margin-bottom: 15px;
-  font-size: 0.9rem;
+.f1-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0 0 0;
+    text-align: left;
+}
+
+.f1-card ul li {
+    background: rgba(255,255,255,0.08);
+    margin-bottom: 10px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 1rem;
+    position: relative;
+}
+
+.f1-card ul li:before {
+    content: "✔";
+    color: #fff700;
+    margin-right: 10px;
+    font-weight: bold;
 }
 
 .f1-card button {
@@ -57,6 +75,8 @@
 .f1-card button:hover {
   background-color: #e0e0e0;
 }
+
+
 
 
 
