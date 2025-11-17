@@ -121,32 +121,54 @@
 
 
 /* Responsive */
-  @media (max-width: 900px) {
+@media (max-width: 900px) {
   .promociones-cards {
     grid-template-columns: repeat(2, 1fr);
   }
 
+
+}
+
 @media (max-width: 768px) {
-  .section-f1 {
-    flex-direction: column;
-    height: auto;
+  .f1-banner img {
+    height: 200px;
   }
 
   .f1-card {
-    position: static;
+    position: relative;
+    top: 20px;
+    right: auto;
     width: 90%;
-    margin-top: -40px;
+    margin: 0 auto 20px;
+    max-width: 100%;
   }
 
+    .f1-card h2 {
+    font-size: 1.1rem;
+  }
 
-}
+  .f1-card ul li {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
 
-@media (max-width: 600px) {
   .promociones-cards {
     grid-template-columns: 1fr;
+    padding: 1.5rem;
+    gap: 1rem;
   }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .card img {
+    height: 150px;
+  }
+
+
 }
-}
+
 
 
 

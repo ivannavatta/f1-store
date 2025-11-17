@@ -6,8 +6,15 @@
 
 body {
     font-family: Arial, sans-serif;
-}
-
+  }
+  
+  .menu-toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 24px;
+      color: #e0e0e0;
+      margin-left: auto;
+  }
 
 
 .navbar {
@@ -50,18 +57,7 @@ body {
     color: #7C0406;
 }
 
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-}
 
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background: white;
-}
 
 .banner {
   position: relative;
@@ -161,34 +157,47 @@ body {
 }
 
 /* Responsive */
-    @media (max-width: 768px) {
-    nav {
+@media (max-width: 768px) {
+ nav {
         justify-content: space-between;
     }
-      .nav-links {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
+.nav-links {
+        display: flex;
         flex-direction: column;
-        background-color: #c00;
-        text-align: center;
-        display: none;
-      }
+        position: fixed;
+        top: 0; 
+        right: 0; 
+        left: 0;
+        width: 100%; 
+        height: 100%; 
+        background-color: #000000; 
+        z-index: 10002;
+        padding-top: 60px; 
+        transition: transform 0.3s ease;
+        transform: translateX(100%); 
+        align-items: center;
+        justify-content: center; 
+    }
 
-      .nav-links.active {
-        display: flex;
-      }
+    .nav-links.active {
+        display: flex; 
+        transform: translateX(0);
+    }
 
-      .hamburger {
-        display: flex;
-      }
-      .carousel-item .d-flex {
-        flex-wrap: wrap;
-        gap: 20px;
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+        position: relative;
+        z-index: 10003;
+        padding-right: 20px;
     }
-      .logo-carrusel {
-        width: 100px;
-        height: 100px;
+
+    .carousel-row {
+        gap: 1.5rem;
+        padding: 1rem 0;
     }
-    }
+
+  .logo-carrusel {
+    width: 80px;
+  }
+}
